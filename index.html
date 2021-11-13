@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html lang="en">
-
+<!-- Set as background and fill it to the container -->
 
 <!--
 At least four different areas on the page, e.g, 
@@ -48,6 +48,7 @@ At least four different areas on the page, e.g,
 
     <head>
         <link rel="stylesheet" href="css/main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
     <title>
         Jer's big beetle
@@ -58,7 +59,7 @@ At least four different areas on the page, e.g,
 
     <div class="container">
         <header>
-            <img src="img/frontSprite.png" alt="icon" ><h1 onclick="changeArea('home')">Jer's Big Beetle </h1> <img src="img/frontSprite.png" alt="icon" >
+            <img src="img/frontSprite.png" alt="icon" ><h1 onclick="changeArea('home','homeNav')">Jer's Big Beetle </h1> <img src="img/frontSprite.png" alt="icon" >
         </header>
         <nav>
             <div id ="homeNav" class="navItem" onclick="changeArea('home','homeNav')" background-color="lightGreen">Home</div>
@@ -76,49 +77,48 @@ At least four different areas on the page, e.g,
 
                     <div class="Carosel">
                         <div class="thumb">
-                            <a href="img/PassengerSide.jpg">
-                                <img src="img/PassengerSide.jpg" alt="Cinque Terre">
-                            </a>
+                                <img src="img/PassengerSide.jpg" alt="Passenger Side" class="imageThumb">
                             <!-- <div class="desc">A view of the lift kit</div>-->
                         </div>
 
                         <div class="thumb">
-                            <a href="img/frontView.jpg">
-                                <img src="img/frontView.jpg" alt="Forest">
-                            </a>
+                                <img src="img/frontView.jpg" alt="Front View" class="imageThumb">
+                            
                             <!-- <div class="desc">The Front view</div>-->
                         </div>
 
                         <div class="thumb">
-                            <a href="img/CeillingLights.jpg">
+                            
 
-                                <img src="img/CeillingLights.jpg" alt="Northern Lights">
-                            </a>
+                                <img src="img/CeillingLights.jpg" alt="Ceiling Lights" class="imageThumb">
+                            
                             <!--<div class="desc">Additional Lighting</div>-->
                         </div>
 
                         <div class="thumb">
 
-                            <a href="img/RadarDetector.jpg">
-                                <img src="img/RadarDetector.jpg" alt="Mountains" onclick="changeImage()">
-                            </a>
+                           
+                                <img src="img/RadarDetector.jpg" alt="Custom wiring" class="imageThumb">
+                           
 
-                            <!--<div class="desc">Radar Detector to help with suprises </div>-->
+                            <!-- <div class="desc">Radar Detector to help with suprises </div>-->
                         </div>
                     </div>
                     <div class="displayed">
                         
 
-                        <img src="img/PassengerSide.jpg" id="displayed">
+                        <img src="img/PassengerSide.jpg" id="displayed" class="imageThumb">
                         
-                        <figcaption> A side view of the lifted beetle</figcaption>
+                        
 
 
                     </div>
+                    <figcaption> A side view of the lifted beetle</figcaption>
                 </div>
             </div>
             <div class="fixes" id="fixes">
                 <article>
+                    
                 <h1 class="pageTitle">Fixes</h1>
                 <h2 class="pageTitle">Parts that have broken that have been replaced</h2>
                 <ul>
