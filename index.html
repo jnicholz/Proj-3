@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<!--
+At least four different areas on the page, e.g, 
+
+    header:
+        Should have an image/logo and a title of some sort.
+        You could place your menu in the header if you so choose.
+
+
+    Menu (aside):
+        Create a menu and place it in a <nav> element in either the header, or an aside to left of main content
+            This could be a menu which uses  'pills' (buttons), or just plain <a> links.  
+            Menu can be vertical or horizontal
+            Menu has a minimum of three links to different 'sections' of your site, for example:
+                Home -  Link which shows your Home Page content
+                Contact - Link which shows your contact information
+                ???   - link to pages which might contain more detailed information and subsections of your site
+                Menu actions will hide/show the different sections each whose main content is in tab-panes', one at a time.
+
+    Main Content:
+        
+        Hiding/Showing Content (Required)
+            Implement implement each section of your site into separate <section> elements
+                Hide all of the elements except for the 'Home' page using the 'display:none' style
+            
+            These are likely contained in <section> tags  One will be set to 'display:none' to start off with.   
+            You will use javascript to hide and show these sections as you click on the menu items or pills.
+        
+        Images
+            Your page must contain images (required) 
+                At least one with a caption
+                    You should enclose this in a 'Figure' html5 tag (Links to an external site.), which also includes a figcaption tag.  (required) (-2 if missing)
+                    Extra Credit  (+2) Utilize a 'picture' tag with child 'source' tags which show different images based on media query.
+        
+        Video (required) 
+            Embed videos of interest on  your topic
+
+
+    Footer
+
+
+-->
+
+<main>
+
+    <head>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <title>
+        Jer's big beetle
+    </title>
+
+    <link rel="shortcut icon" href="img/frontSprite.png">
+    </head>
+
+    <div class="container">
+        <header>
+            <img src="img/frontSprite.png" alt="icon" ><h1 onclick="changeArea('home')">Jer's Big Beetle </h1> <img src="img/frontSprite.png" alt="icon" >
+        </header>
+        <nav>
+            <div id ="homeNav" class="navItem" onclick="changeArea('home','homeNav')" background-color="lightGreen">Home</div>
+            <div id ="fixNav" class="navItem" onclick="changeArea('fixes','fixNav')">Fixes</div>
+            <div id ="upNav" class="navItem" onclick="changeArea('upgrades','upNav')">Upgrades</div>
+            <div id ="statNav" class="navItem" onclick="changeArea('stats','statNav')">Statistics</div>
+            
+        </nav>
+        
+
+        <body>
+            <div class="homeFlex" id="home">
+                <div class="home">
+                    <!--Script tag goes here-->
+
+                    <div class="Carosel">
+                        <div class="thumb">
+                            <a href="img/PassengerSide.jpg">
+                                <img src="img/PassengerSide.jpg" alt="Cinque Terre">
+                            </a>
+                            <!-- <div class="desc">A view of the lift kit</div>-->
+                        </div>
+
+                        <div class="thumb">
+                            <a href="img/frontView.jpg">
+                                <img src="img/frontView.jpg" alt="Forest">
+                            </a>
+                            <!-- <div class="desc">The Front view</div>-->
+                        </div>
+
+                        <div class="thumb">
+                            <a href="img/CeillingLights.jpg">
+
+                                <img src="img/CeillingLights.jpg" alt="Northern Lights">
+                            </a>
+                            <!--<div class="desc">Additional Lighting</div>-->
+                        </div>
+
+                        <div class="thumb">
+
+                            <a href="img/RadarDetector.jpg">
+                                <img src="img/RadarDetector.jpg" alt="Mountains" onclick="changeImage()">
+                            </a>
+
+                            <!--<div class="desc">Radar Detector to help with suprises </div>-->
+                        </div>
+                    </div>
+                    <div class="displayed">
+                        
+
+                        <img src="img/PassengerSide.jpg" id="displayed">
+                        
+                        <figcaption> A side view of the lifted beetle</figcaption>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="fixes" id="fixes">
+                <article>
+                <h1 class="pageTitle">Fixes</h1>
+                <h2 class="pageTitle">Parts that have broken that have been replaced</h2>
+                <ul>
+                    <li>
+                        Injection pump seals and hoses
+                    </li>
+
+                    <li>
+                        Radiator
+                    </li>
+                    
+                    <li>
+                        Oil pan (2x)
+                    </li>
+
+                    <li>
+                        all Breaks and Break calipers
+                    </li>
+                    
+                    <li>
+                        FogLights 2x
+                    </li>
+
+                    <li>
+                        Tie rod ends and lower control arms
+                    </li>
+
+                    <Li>
+                        Rear Wheel bearings
+                    </Li>
+
+                    <li>
+                        door handle
+                    </li>
+
+                    <li>
+                        Door acuatior
+                    </li>
+
+
+                </ul>
+            </article>
+            </div>
+            <div class ="upgrades" id="upgrades">
+                <h1 class="pageTitle">
+                    Upgrades
+                </h1>
+                
+                <h2 class="pageTitle">
+                    Areas that were upgraded to improve functionality
+                </h2>
+                <div>
+                <ul>
+                    <li>
+                        Led Bulbs
+                    </li>
+                    <li>
+                        Interior lighting in headliner.
+                    </li>
+                    <li>
+                        Stage 1 ECU tune from malone tuning
+                    </li>
+                    <li>
+                        Skid plate
+                    </li>
+                    <li>
+                        Plastidiped badging
+                    </li>
+                    <li>
+                        Darkened reflective surfaces in the headlight (it's fine with the LED that is in there)
+                    </li>
+                    <li>
+                        12 inch Subwoofer and 2 way speaker swap
+                    </li>
+
+
+                </ul>
+                </div>
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1TvjEweC9qY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            </div>
+            <div class = "stats" id = stats>
+                <h1 class="pageTitle">
+                    Statistics
+                </h1>
+                
+                <h2 class="pageTitle">
+                    Some easier to quantify numbers
+                    </h2>
+                <table>
+                    <tr>
+                      <th>Part</th>
+                      <th>Spec</th>
+                      <th>Change from Stock</th>
+                      
+                    </tr>
+                    <tr>
+                      <td>Lift kit</td>
+                      <td> Stage 2 coil Spacers via VW Highlife</td>
+                      <td> +2 inches in the front, +3.5 in the rear.</td>
+                    </tr>
+                    <tr>
+                      <td>Tires</td>
+                      <td>215/60/r17 (27.3 diameter) Falken Wildpeaks </td>
+                      <td> +2.4 inches from 24.9 in </td>
+                      
+                    </tr>
+                    <tr>
+                        <td> Horse Power </td>
+                        <td> 110 HP</td>
+                        <td> +21 HP</td>
+                    </tr>
+                    <tr>
+                        <td> Current Torque </td>
+                        <td> 188 Ft. Lbs</td>
+                        <td> +33 Ft. Lbs</td>
+                    </tr>
+                    <tr>
+                        <td> Average MPG </td>
+                        <td> ~ 40</td>
+                        <td> -1 from EPA rating</td>
+                    </tr>
+                    <tr>
+                        <td> MPG at last fill up </td>
+                        <td> 37.9 MPG </td>
+                        <td> N/A</td>
+                    </tr>
+                  </table> 
+
+            </div>
+
+
+    </div>
+
+    <script src="js/main.js"></script>
+    
+    <footer>
+        Created by Jeremiah Nicholls, October 2021.
+         Obviously I am not a Girrafic Designer
+    </footer>    
+</body>
+
+</main>
+</div>
+
+</html>
+<!-- 
+Extra Credit Opportunities
+    Use animate.css, straight CSS, or javascript to create at least two pleasing animations (+2)
+    Use fontawesome icons in your implementation (+2)
+    Extra Credit  (+2) Utilize a 'picture' tag with child 'source' tags which show different images based on media query.
+
+-->
