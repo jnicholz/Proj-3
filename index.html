@@ -44,7 +44,7 @@ At least four different areas on the page, e.g,
 
 -->
 
-<main>
+
 
     <head>
         <link rel="stylesheet" href="css/main.css">
@@ -57,10 +57,12 @@ At least four different areas on the page, e.g,
     <link rel="shortcut icon" href="img/frontSprite.png">
     </head>
 
-    <div class="container">
+    <body>
+       
         <header>
             <img src="img/frontSprite.png" alt="icon" ><h1 onclick="changeArea('home','homeNav')">Jer's Big Beetle </h1> <img src="img/frontSprite.png" alt="icon" >
         </header>
+       
         <nav>
             <div id ="homeNav" class="navItem" onclick="changeArea('home','homeNav')" background-color="lightGreen">Home</div>
             <div id ="fixNav" class="navItem" onclick="changeArea('fixes','fixNav')">Fixes</div>
@@ -69,8 +71,8 @@ At least four different areas on the page, e.g,
             
         </nav>
         
-
-        <body>
+        <main>
+        
             <div class="homeFlex" id="home">
                 <div class="home">
                     <!--Script tag goes here-->
@@ -250,20 +252,22 @@ At least four different areas on the page, e.g,
                   </table> 
 
             </div>
+            
+        </main>   
+    
 
-
-    </div>
-
+            <footer>
+                Created by Jeremiah Nicholls, October 2021.
+                 Obviously I am not a Girrafic Designer
+            </footer> 
+        
     <script src="js/main.js"></script>
     
-    <footer>
-        Created by Jeremiah Nicholls, October 2021.
-         Obviously I am not a Girrafic Designer
-    </footer>    
 </body>
 
-</main>
-</div>
+ 
+
+
 
 </html>
 <!-- 
