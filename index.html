@@ -48,8 +48,9 @@ At least four different areas on the page, e.g,
 
     <head>
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="null" id="Stacker">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    </head>
+    
     <title>
         Jer's big beetle
     </title>
@@ -60,14 +61,19 @@ At least four different areas on the page, e.g,
     <body>
        
         <header>
-            <img src="img/frontSprite.png" alt="icon" ><h1 onclick="changeArea('home','homeNav')">Jer's Big Beetle </h1> <img src="img/frontSprite.png" alt="icon" >
+            <img src="img/frontSprite.png" alt="icon" ><h1 >Jer's Big Beetle </h1> <img src="img/frontSprite.png" alt="icon" >
         </header>
        
         <nav>
-            <div id ="homeNav" class="navItem" onclick="changeArea('home','homeNav')" background-color="lightGreen">Home</div>
-            <div id ="fixNav" class="navItem" onclick="changeArea('fixes','fixNav')">Fixes</div>
-            <div id ="upNav" class="navItem" onclick="changeArea('upgrades','upNav')">Upgrades</div>
-            <div id ="statNav" class="navItem" onclick="changeArea('stats','statNav')">Statistics</div>
+            <div id ="homeNav" class="navItem" area="#home">Home</div>
+            <div id ="fixNav" class="navItem" area="#fixes">Fixes</div>
+            <div id ="upNav" class="navItem" area="#upgrades">Upgrades</div>
+            <div id ="statNav" class="navItem" area="#stats">Statistics</div>
+            <div id ="formNav" class="navItem"  area="#form">Log Visit</div>
+            <div id ="Theme" class="themeIcon" >Theme</div>
+         
+
+            <!--<i class="far fa-snowflake"></i>-->
             
         </nav>
         
@@ -98,25 +104,20 @@ At least four different areas on the page, e.g,
                         </div>
 
                         <div class="thumb">
-
-                           
                                 <img src="img/RadarDetector.jpg" alt="Custom wiring" class="imageThumb">
-                           
-
                             <!-- <div class="desc">Radar Detector to help with suprises </div>-->
                         </div>
+                    
                     </div>
+                    
                     <div class="displayed">
-                        
-
                         <img src="img/PassengerSide.jpg" id="displayed" class="imageThumb">
-                        
-                        
-
-
                     </div>
+
                     <figcaption> A side view of the lifted beetle</figcaption>
+                
                 </div>
+
             </div>
             <div class="fixes" id="fixes">
                 <article>
@@ -219,7 +220,7 @@ At least four different areas on the page, e.g,
                       
                     </tr>
                     <tr>
-                      <td>Lift kit</td>
+                      <td> Lift kit </td>
                       <td> Stage 2 coil Spacers via VW Highlife</td>
                       <td> +2 inches in the front, +3.5 in the rear.</td>
                     </tr>
@@ -252,7 +253,121 @@ At least four different areas on the page, e.g,
                   </table> 
 
             </div>
+            <!-- <i class="fas fa-car-alt"></i> -->
+            <div class="form" id="form" >
+                <h1>Visitor Form</h1>
+                
+                <div class="successMsg" style="display:none" id="completed">
+                  Thank you for logging your visit!
+                </div>
+                <form id="myform" novalidate>
+                  
+                    <table class="flex">
+                    
+                    <tr class="section-display">
+                      <td><label for="first-name">First Name</label></td>
+                     <td><input type="text" id="first-name" name="first-name" 
+                            placeholder="Enter your first name here" required></td>
+                        <td><div class="errorMsg" id="first-nameErrMsg" style="display:none">First Name is Required</div> </td>
+                    </tr>
+                    
+                    <tr >
+                      <td><label for="last-name">Last Name</label></td>
+                      <td><input type="text"  id="last-name" name="last-name" placeholder="Enter your last name here"></td>
+                      <td><div class="errorMsg" id="last-nameErrMsg" style="display:none">Last Name is Required</div></td>
+                    </tr>
+                    
+                    <tr >
+                      <td><label for="address">Address</label></td>
+                      <td><input type="text"  id="address" name="address" placeholder="Enter your address here"> </td>
+                      <td><div class="errorMsg"  id="addressErrMsg" style="display:none"></div> </td>
+                    </tr>
+                    
+                    <tr>
+                      <td><label for="city">City</label></td>
+                      <td><input type="text"  id="city" name="city" placeholder="Enter your city here" required></td>
+                      <td><div class="errorMsg" id="cityErrMsg" style="display:none" ></div></td>
+                    </tr>
+                    
+                    <tr >
+                      <td><label for="state">State</label></td>
+                      <td><input type="text"  id="state"  name="state" placeholder="Enter your state here"></td>
+                      <td><div class="errorMsg" id="stateErrMsg" style="display:none">Not a valid US state</div></td>
+                    </tr>
+                    
+                    <tr >
+                      <td><label for="zip">Zip</label></td>
+                      <td><input id="zip" name="zip" type="text" placeholder="Enter a zip code here" ></td>
+                      <td><div class="errorMsg" id="zipErrMsg" style="display:none" >You must enter a valid Zip Code</div></td>
+                    </tr>
+                    
+                    <tr >
+                      <td><label for="email">Email</label></td>
+                      <td><input type="email" id="email" name="email" placeholder="Enter your email here" ></td>
+                      <td><div class="errorMsg" id="emailErrMsg" style="display:none">You must enter a valid email</div></td>
+                    </tr>
+                    
+                    <tr>
+                      <td><label for="phone">Phone</label></td>
+                      <td><input type="tel" id="phone" name ="phone" placeholder="Enter your phone here"></td>
+                      <td><div class="errorMsg" id="phoneErrMsg" style="display:none">You must enter a valid phone number</div></td>
+                    </tr>
+                    
+                    <tr>
+                    <th colspan="3">How did you find my page?</th>
+                    </tr>
+                    
+                    <tr>
+                    <td colspan="3">
+                      <input type="checkbox" id='google' name='find-page' value="google">
+                      <label for="google">Google Search</label>
+                    </td>
+                    </tr>
+                    
+                    <tr>
+                    <td colspan="3">
+                      <input type="checkbox" id='friend' name='find-page' value="friend">
+                      <label for="friend">Friend</label>
+                    </td>
+                    </tr>
+                    
+                    <tr>
+                    <td colspan="2">
+                      <input type="checkbox" id='newspaper' name='find-page' value="newspaper">
+                      
+                      <label for="newspaper">News Paper</label></td>
+                      
+                      <!--Note that I have added the errorMsg div under the 'newspaper' checkbox.  
+                        When marking this group as 'valid' or 'invalid' you can just call setElementValidity 
+                        on this one element instead of all of them -->
+                      
+                        <td><div class="errorMsg" id="newspaperErrMsg" style="display:none">You must check at least one</div></td>
+                    
+                    </tr>
+                    <tr>
+                    
+                        <td><label for="comment">Comments</label></td>
+                      <td colspan="2"><textarea rows="4" id="comment" placeholder="Enter your comments here" required></textarea></td>
+                    </tr>
+                    </table>
+                    
+                      <button id="formSubmit" type="submit">Send</button>
+                    
+                  
+                
+                </form>
+                </div>
             
+                <!-- Move this down if possible-->
+
+              <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+              <script src="js/validation.js"></script>
+              <script>
+                $(document).ready(function () {
+                  initValidation("#myform");
+            
+                });
+              </script> 
         </main>   
     
 
@@ -262,6 +377,7 @@ At least four different areas on the page, e.g,
             </footer> 
         
     <script src="js/main.js"></script>
+    <script src="https://kit.fontawesome.com/88ae3b526d.js" crossorigin="anonymous"></script>
     
 </body>
 

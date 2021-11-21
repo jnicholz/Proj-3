@@ -1,0 +1,154 @@
+/* Remove floats */
+
+/* Project 3 changes
+
+Re-worked flexbox boundaires of the site
+implemented better colors for active page element
+Rounded corners to improve element asthetic
+Actually implemented gallery image switching
+fixed ugly scrollbars
+fixed flexbox issues
+fied nav scaling issues
+implemented color change in CSS
+
+A bunch more but I have to turn this in
+
+*/
+
+@media only screen and (min-width: 960px) {
+  body{
+    background:  radial-gradient(circle, rgba(247,86,69,1) 0%, rgba(247,197,69,1) 100%);
+ 
+  }
+  
+
+  
+  header h1{
+    color : white ;
+    text-shadow: 1px 1px rgb(0,212,255);
+  }
+  
+  
+  nav>div {
+    color: white;
+  
+  }
+
+  .navItem{
+    background-color: #ED42D3;
+    box-shadow: 3px 3px #FB6346;
+    
+  }
+  
+  nav>div:hover {
+    color: white;
+    text-emphasis-color: white;
+    background-color: cadetblue;
+  }
+
+  main{
+    background-color:#F0E73C;
+    
+  } 
+  
+  
+  .fixes{
+    background: #F0E73C;
+   
+  }
+  
+  .upgrades{
+    background: #F0E73C;
+  
+  }
+  
+  
+  .stats{
+    background: #F0E73C;
+  }
+  
+  .form{
+    background: #F0E73C;
+  }
+  
+  th{
+    background-color: #ED42D3;
+    color: blanchedalmond;
+  }
+  tr:nth-child(odd) {
+    background:  #FB6346;
+  }
+
+  
+  
+  .home{
+    
+    background: #F0E73C;
+  }
+  div.Carosel>.thumb {    
+      border: 1px solid #ccc;
+
+    }
+  
+  div.thumb:hover {
+      border: 1px solid #777;
+    }
+    
+    figcaption{
+     
+       color: #333;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 960px) {
+   
+    body {
+      background: radial-gradient(circle, rgba(247,86,69,1) 0%, rgba(247,197,69,1) 100%);
+     
+    }
+  
+    header h1{
+      color :#ED42D3;
+      text-shadow: 2px 2px black;
+    }
+  
+    nav>div{
+      background-color: DodgerBlue;
+      color: white;
+    }
+    .navItem{
+      background-color: #ED42D3;
+    }
+   
+    .homeflex{
+      display: flex;
+      
+    }
+    
+  .home{
+  
+    background-color:#F0E73C;
+  }
+  .fixes{
+    background-color:#F0E73C;
+  }
+  
+  .upgrades{
+    background-color:#F0E73C;
+    
+  }
+  
+  .stats{
+    background-color:#F0E73C;
+  }
+  
+  th{
+    background-color: #ED42D3;
+    color: blanchedalmond;
+  }
+  tr:nth-child(odd) {
+    background:  #FB6346;
+  }
+  
+}
