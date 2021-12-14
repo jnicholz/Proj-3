@@ -2,24 +2,26 @@
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        
-
-
-    {
-        "name": "Launch Chrome",
-        "request": "launch",
-        "type": "pwa-chrome",
-        "url": "http://127.0.0.1:8080",
-        "webRoot": "${workspaceFolder}"
-    },
-        {
-            "type": "pwa-chrome",
-            "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://127.0.0.1:8080",
-            "webRoot": "${workspaceFolder}"
-        }
-    ]
-}
+    
+    
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Launch index.html",
+                "type": "firefox",
+                "request": "launch",
+                "reAttach": false,
+                "file": "${workspaceFolder}/index.html",
+                "pathMappings": [
+                    {
+                        "url": "file:///C:/Users/jerem/OneDrive%20-%20my.uvu.edu/Web%20Programming",
+                        "path": "c:/Users/jerem/OneDrive - my.uvu.edu/Web Programming"
+                    },
+                    {
+                        "url": "file:///C:/Users/jerem/OneDrive%20-%20my.uvu.edu/Web%20Programming/Projects/Proj6",
+                        "path": "c:/Users/jerem/OneDrive - my.uvu.edu/Web Programming/Projects/Proj6"
+                    }
+                ]
+            }
+        ]
+    }
