@@ -14,7 +14,7 @@ var defUnSel = "#ED42D3";
 $(document).ready(function(){
 
 
-  $("#homeNav").css("background-color", selColor);
+$("#homeNav").css("background-color", selColor);
 
 
 $('.imageThumb').click(function(){

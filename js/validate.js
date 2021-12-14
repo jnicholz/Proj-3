@@ -32,14 +32,13 @@ function initValidation(formName) {
     }
     else{
       //TODO
-       $("form").css("display","none");
+      $("form").hide;
 
-      $("#completed").attr("style","display:flex");
+      //$("#completed").attr("style","display:flex");
       //hide form
       //show thank you message
     }
    
-
   });
 }
 
@@ -47,7 +46,6 @@ function validateForm() {
   
   validateState("#state", "You must enter a valid two character state code, e.g., UT")
   validateCheckboxGroup("#newspaper", "find-page", "you must select at least one!");
-  
 }
 
 function validateState(id, msg){
@@ -61,10 +59,8 @@ function validateState(id, msg){
   if ( -1 != jQuery.inArray( upper, stateAbbreviations)){
     valid=true;
   }
-  
+
   setElementValidity(id, valid, msg);
-
-
 }
 
 function validateCheckboxGroup(fieldName, groupName, message) {
@@ -78,7 +74,6 @@ function validateCheckboxGroup(fieldName, groupName, message) {
   }
 
   setElementValidity(fieldName, valid, message);
-  
   return valid;
 }
 

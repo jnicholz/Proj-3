@@ -7,9 +7,6 @@ Changes implemented:
   gave border radiuses
   added 
 
-
-
-
 */
 
 @media only screen and (min-width: 960px) {
@@ -154,7 +151,8 @@ Changes implemented:
     border-radius: 10px;
   }
 
-  .form{
+
+ .form{
     display: none;
     flex-direction: column;
     background: #999;
@@ -165,8 +163,9 @@ Changes implemented:
     border-radius: 10px;
     padding: 5% 5% 0% 5%;
   }
-  .myform{
-    display:flex;
+
+  #visForm {
+    display: none;
     flex-direction: column;
   }
   
@@ -174,12 +173,26 @@ Changes implemented:
     color: blueviolet;
 
   }
+  .delete :hover{
+    background-color: palegreen;
+  }
 
   .was-validated input:invalid,
   input.was-validated:invalid {
     color: red;
     border: 2px dotted red;
+  }
 
+  .visButtons{
+    max-width: 20%;
+    background-color: palegreen;
+    border-radius: 15px;
+    box-shadow: paleturquoise,5px,4px;
+    text-shadow: paleturquoise,3px,2px;
+  }
+
+  .delete{
+    background-color: orchid;
   }
 
   .home>div.Carosel{

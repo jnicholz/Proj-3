@@ -69,7 +69,7 @@ At least four different areas on the page, e.g,
             <div id ="fixNav" class="navItem" area="#fixes">Fixes</div>
             <div id ="upNav" class="navItem" area="#upgrades">Upgrades</div>
             <div id ="statNav" class="navItem" area="#stats">Statistics</div>
-            <div id ="formNav" class="navItem"  area="#form">Log Visit</div>
+            <div id ="formNav" class="navItem"  area="#form">Visitors</div>
             <div id ="Theme" class="themeIcon" >Theme</div>
          
 
@@ -96,8 +96,6 @@ At least four different areas on the page, e.g,
                         </div>
 
                         <div class="thumb">
-                            
-
                                 <img src="img/CeillingLights.jpg" alt="Ceiling Lights" class="imageThumb">
                             
                             <!--<div class="desc">Additional Lighting</div>-->
@@ -253,13 +251,33 @@ At least four different areas on the page, e.g,
                   </table> 
 
             </div>
-            <!-- <i class="fas fa-car-alt"></i> -->
-            <div class="form" id="form" >
-                <h1>Visitor Form</h1>
+            
+                <div class="form" id="form" >
+                <h1>Visitors</h1>
+                <button type="button" class="visButtons" id="visButtons">New Visitor</button>
                 
                 <div class="successMsg" style="display:none" id="completed">
-                  Thank you for logging your visit!
+                    Thank you for logging your visit!
                 </div>
+                  
+                
+                <div id="visLog" class="visLog">
+                    <table id="visTable" name ="visTable">
+                        <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>how did you find us?</th>
+                            <th>Notes </th>
+                            <th>Options</th>
+                        </tr>
+
+                    </table>
+                </div>
+                
+               
+                <div class ="visForm" id ="visForm">
                 <form id="myform" novalidate>
                   
                     <table class="flex">
@@ -347,21 +365,21 @@ At least four different areas on the page, e.g,
                     <tr>
                     
                         <td><label for="comment">Comments</label></td>
-                      <td colspan="2"><textarea rows="4" id="comment" placeholder="Enter your comments here" required></textarea></td>
+                      <td colspan="2"><textarea rows="4" name="comment" id="comment" placeholder="Enter your comments here" required></textarea></td>
                     </tr>
                     </table>
                     
-                      <button id="formSubmit" type="submit">Send</button>
-                    
-                  
+                      <button id="formSubmit" type="submit">Save</button> 
                 
                 </form>
                 </div>
-            
+            </div>
+          
+             
                 <!-- Move this down if possible-->
 
               <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-              <script src="js/validation.js"></script>
+              <script src="js/validate.js"></script>
               <script>
                 $(document).ready(function () {
                   initValidation("#myform");
@@ -375,8 +393,10 @@ At least four different areas on the page, e.g,
                 Created by Jeremiah Nicholls, October 2021.
                  Obviously I am not a Girrafic Designer
             </footer> 
-        
-    <script src="js/main.js"></script>
+    
+    <script src="js/view.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/controller.js"></script>
     <script src="https://kit.fontawesome.com/88ae3b526d.js" crossorigin="anonymous"></script>
     
 </body>
