@@ -170,8 +170,7 @@ Changes implemented:
   }
   
   .errorMsg{
-    color: blueviolet;
-
+    color: red;
   }
   .delete :hover{
     background-color: palegreen;
@@ -181,18 +180,25 @@ Changes implemented:
   input.was-validated:invalid {
     color: red;
     border: 2px dotted red;
+    
   }
 
+  
+
   .visButtons{
-    max-width: 20%;
-    background-color: palegreen;
+    width: 20%;
+    background-color: #178EFB;
     border-radius: 15px;
     box-shadow: paleturquoise,5px,4px;
     text-shadow: paleturquoise,3px,2px;
   }
 
-  .delete{
-    background-color: orchid;
+  .formSubmit{
+    width: 10%;
+    background-color: #178EFB;
+    border-radius: 15px;
+    box-shadow: paleturquoise,5px,4px;
+    text-shadow: paleturquoise,3px,2px;
   }
 
   .home>div.Carosel{
@@ -254,9 +260,9 @@ Changes implemented:
     text-shadow: #777;
   }
 
-  .pageTitle{
+  /*.pageTitle{
     text-align: center;
-  }
+  }*/
   
   footer{
     display: block;
@@ -443,13 +449,19 @@ Changes implemented:
     padding: 7%;
 
   }
-  .flex{
+  .dataForm{
     justify-content: center;
+    width: 50%;
   }
   .myform{
     justify-content: center;
     min-height: 80vh;
     padding: 10%;
+  }
+
+  table > .flex{
+    table-layout: auto;
+    width: 50%;
   }
 
   footer{

@@ -42,8 +42,6 @@ function showForm() {
 
 function clearForm() {
     //clears values on inputs so next time form is loaded they don't have old contents
-    $(':input','#myform').not(':button, :submit, :reset, :hidden')
-    .val('')
-    //.prop('checked', false)
-    .prop('selected', false);
+    $(':input','#myform').not(':button, :submit, :reset, :hidden').val('')
+    .prop('checked', false)
 }

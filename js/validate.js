@@ -14,6 +14,7 @@ function initValidation(formName) {
     validateForm();
     if(!this.checkValidity())
       $(this).addClass("was-validated")
+      
 
     
   });
@@ -21,20 +22,24 @@ function initValidation(formName) {
   $form.submit(function(event){
     $form = $(this);
     formEl=$form.get(0);
+    console.log(formEl)
 
     event.preventDefault();  
     event.stopPropagation(); 
 
     validateForm();
 
+
     if (!formEl.checkValidity()){
       $(":input").addClass("was-validated")
+      $('.errorMsg').show()
+      
     }
     else{
       //TODO
-      $("form").hide;
+      submitForm()
 
-      //$("#completed").attr("style","display:flex");
+      $("#completed").show();
       //hide form
       //show thank you message
     }
@@ -43,10 +48,13 @@ function initValidation(formName) {
 }
 
 function validateForm() {
-  
+ 
+
   validateState("#state", "You must enter a valid two character state code, e.g., UT")
   validateCheckboxGroup("#newspaper", "find-page", "you must select at least one!");
 }
+
+
 
 function validateState(id, msg){
   $el = $(id);
@@ -84,23 +92,25 @@ function setElementValidity(fieldName, valid, message){
  
   if (valid) {  
     el.setCustomValidity(''); 
+    $(errMsgName).text('')
     
   } 
   else {
 
-    el.setCustomValidity(message);  
+    el.setCustomValidity(message); 
+    $(errMsgName).text(message)
    
   }
   
   //here I tried to implement a concatination to turn certain messages off and on
-  if((el.val == undefined)||(valid==true)){
-    $(errMsgName).attr('style', 'display:none');
-  }
-  else{
+  //if((el.val == undefined)||(valid==true)){
+    //$(errMsgName).attr('style', 'display:none');
+  //}
+  //else{
     
-      $(errMsgName).attr('style', 'display:flex');
+  //    $(errMsgName).attr('style', 'display:block');
     
-  }
+  //}
 
  } 
   

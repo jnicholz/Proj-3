@@ -266,8 +266,8 @@ At least four different areas on the page, e.g,
                         <tr>
                             <th>Name</th>
                             <th>Address</th>
-                            <th>Phone</th>
-                            <th>Email</th>
+                            <th> Email </th>
+                            <th> Phone </th>
                             <th>how did you find us?</th>
                             <th>Notes </th>
                             <th>Options</th>
@@ -280,13 +280,13 @@ At least four different areas on the page, e.g,
                 <div class ="visForm" id ="visForm">
                 <form id="myform" novalidate>
                   
-                    <table class="flex">
+                    <table class="flex" id="dataForm">
                     
                     <tr class="section-display">
                       <td><label for="first-name">First Name</label></td>
                      <td><input type="text" id="first-name" name="first-name" 
                             placeholder="Enter your first name here" required></td>
-                        <td><div class="errorMsg" id="first-nameErrMsg" style="display:none">First Name is Required</div> </td>
+                        <td><div class="errorMsg" id="first-nameErrMsg"style="display:none">Must Have first name</div> </td>
                     </tr>
                     
                     <tr >
@@ -298,19 +298,19 @@ At least four different areas on the page, e.g,
                     <tr >
                       <td><label for="address">Address</label></td>
                       <td><input type="text"  id="address" name="address" placeholder="Enter your address here"> </td>
-                      <td><div class="errorMsg"  id="addressErrMsg" style="display:none"></div> </td>
+                      <td><div class="errorMsg"  id="addressErrMsg" style="display:none">must have address</div>  </td>
                     </tr>
                     
                     <tr>
                       <td><label for="city">City</label></td>
                       <td><input type="text"  id="city" name="city" placeholder="Enter your city here" required></td>
-                      <td><div class="errorMsg" id="cityErrMsg" style="display:none" ></div></td>
+                      <td><div class="errorMsg" id="cityErrMsg" style="display:none" >Must have city</div></td>
                     </tr>
                     
                     <tr >
                       <td><label for="state">State</label></td>
                       <td><input type="text"  id="state"  name="state" placeholder="Enter your state here"></td>
-                      <td><div class="errorMsg" id="stateErrMsg" style="display:none">Not a valid US state</div></td>
+                      <td><div class="errorMsg" id="stateErrMsg" style="display:none" >Not a valid US state</div></td>
                     </tr>
                     
                     <tr >
@@ -369,7 +369,7 @@ At least four different areas on the page, e.g,
                     </tr>
                     </table>
                     
-                      <button id="formSubmit" type="submit">Save</button> 
+                      <button id="formSubmit" type="submit" class="formSubmit">Save</button> 
                 
                 </form>
                 </div>

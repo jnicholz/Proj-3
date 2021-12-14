@@ -68,7 +68,7 @@ function loadVisitors() {
 
 
 //called on form submit. Gets contents of form, creates visitor object,
-$('#formSubmit').click(function submitForm() {
+function submitForm() {
 
   var formData = $('#myform').serializeArray()
 
@@ -81,23 +81,25 @@ $('#formSubmit').click(function submitForm() {
   //calls view 'showTable'
   showTable()
 
-});
+};
 
 //called on 'click' of 'New Visitor' button
 $('#visButtons').click(function addVisitor(visitor) {
   
-  //calls view 'clearForm' to clear form contents
-  clearForm();
 
   //calls view 'showForm'
   showForm();
+
+  
+  //calls view 'clearForm' to clear form contents
+  clearForm();
 });
 
 //called on 'click' of 'delete' icon in visitor list 
 $('#visTable').on('click','.trash', function deleteVisitor(id) {
 
-
-
+  if(confirm("Are you sure you want to delete this?"))
+  {
   //calls model.js modelDeleteVisitor
   modelDeleteVisitor(this.id)
   
@@ -106,7 +108,7 @@ $('#visTable').on('click','.trash', function deleteVisitor(id) {
   
   //calls view 'showTable'
   showTable()
-  
+}
 
 });
 
