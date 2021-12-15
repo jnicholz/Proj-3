@@ -97,8 +97,10 @@ function findVisitorIndex(targID) {
     return ind;
 };
 
-function modelUpdateVisitor(visitor) {
+$('#visTable').on('click','.edit', function modelUpdateVisitor(id) {
     //finds and updates a visitor object a your array
     //Only for extra credit 'edit' function
-    let x=1;
-};
+    confirm(("editing Visitor ID #"+this.id))
+
+
+});

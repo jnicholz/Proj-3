@@ -102,15 +102,6 @@ function setElementValidity(fieldName, valid, message){
    
   }
   
-  //here I tried to implement a concatination to turn certain messages off and on
-  //if((el.val == undefined)||(valid==true)){
-    //$(errMsgName).attr('style', 'display:none');
-  //}
-  //else{
-    
-  //    $(errMsgName).attr('style', 'display:block');
-    
-  //}
 
  } 
   

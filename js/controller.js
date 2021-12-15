@@ -41,10 +41,10 @@ $('.imageThumb').click(function(){
  
     $(this).css("background-color",selColor);
     $(Nav).css("background-color", unSelColor);
-    $(currentView).css("display","none");
+    $(currentView).hide();
     currentView=$(this).attr("area");
     Nav = ("#"+$(this).attr("id"));
-    $(currentView).css("display", "flex");
+    $(currentView).show(500);
     if(currentView == "#form"){
       loadVisitors();
     }

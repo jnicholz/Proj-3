@@ -11,7 +11,8 @@ function renderTable(containerId, visitors) {
     for ( i=0; i < visitors.length; i++){
         rowString +=("<tr class ='visDat'><td>"+ visitors[i].name+"<td>"+visitors[i].addr+
         "</td><td>" +visitors[i].email+"</td><td>"+visitors[i].phone+"</td><td>"+visitors[i].source+
-        "</td><td>"+visitors[i].comment+"</td><td> <button class='trash' id='"+visitors[i].id+"'><i class='far fa-trash-alt'></i></button></td></tr>");
+        "</td><td>"+visitors[i].comment+"</td><td> <button class='trash' id='"+visitors[i].id+"'><i class='far fa-trash-alt'>"
+        +"</i></button><button class='edit' id='"+visitors[i].id+"'><i class='fa fa-pencil'></i></button></td></tr>");
     }
     
     $(tableLR).append(rowString);
@@ -24,20 +25,20 @@ function showTable(){
    
     $('#visForm').hide();
     
-    $('#visLog').show();
+    $('#visLog').show(500,'swing');
 }               comment
 
 
 function showVisitors()  {
     //shows visitor container and hides all other site content containers 
-    $('#visLog').show;
+    $('#visLog').show(500,'swing');
 }
 
 
 function showForm() {
     //shows visitor form and hides list
     $('#visLog').hide();
-    $('#visForm').show();
+    $('#visForm').show(500,'swing');
 }
 
 function clearForm() {

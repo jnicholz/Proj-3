@@ -80,6 +80,11 @@ A bunch more but I have to turn this in
   }
 
   
+  .errorMsg{
+    color: red;
+    background-color: grey;
+  }
+
   
   .home{
     
